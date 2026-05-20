@@ -1,0 +1,35 @@
+PASSOS PRINCIPAIS PARA AUTENTICAÇÃO VIA TOKEN NO GITHUB
+=======================================================
+
+1. Gere um token pessoal no GitHub:
+   - Acesse github.com e faça login
+   - Vá em Settings > Developer settings > Personal access tokens
+   - Clique em "Generate new token"
+   - Selecione o tipo "Fine-grained token" ou "Classic token"
+   - Escolha as permissões necessárias (repo, workflows, etc.)
+   - Defina validade e copie o token gerado
+
+2. Use o token no Git remoto:
+   - No Git Bash ou terminal, ao clonar ou fazer push, use sua conta GitHub como usuário
+   - No lugar da senha, cole o token pessoal
+
+3. Armazene o token no gerenciador de credenciais:
+   - Ative o helper de credenciais do Git:
+     git config --global credential.helper manager-core
+   - Na próxima autenticação, insira o token quando solicitado
+
+4. Configure URLs remotas com HTTPS:
+   - Verifique o remoto do repositório:
+     git remote -v
+   - Use a URL HTTPS em vez de SSH, por exemplo:
+     https://github.com/usuario/repositorio.git
+
+5. Verifique a autenticação:
+   - Faça um push ou pull para testar:
+     git push origin main
+   - Se a autenticação for bem-sucedida, não será pedido senha novamente
+
+6. Segurança:
+   - Nunca compartilhe o token
+   - Revogue tokens antigos na página do GitHub
+   - Use tokens de curto prazo ou escopo limitado sempre que possível

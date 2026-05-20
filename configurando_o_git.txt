@@ -1,0 +1,24 @@
+RESUMO RÁPIDO DE CONFIGURAÇÃO DO GIT
+===================================
+
+1. Verifique a instalação:
+   - Abra o PowerShell ou Prompt de Comando e execute:
+     git --version
+
+2. Configure seu nome e e-mail:
+   - git config --global user.name "Seu Nome"
+   - git config --global user.email "seu.email@example.com"
+
+3. Defina o editor padrão (opcional):
+   - git config --global core.editor "code --wait"
+
+4. Ajuste o comportamento de fim de linha:
+   - git config --global core.autocrlf true
+
+5. Configure o gerenciador de credenciais:
+   - git config --global credential.helper manager-core
+
+6. Verifique as configurações:
+   - git config --list
+
+Esses são os passos principais para deixar o Git pronto para uso no Windows.

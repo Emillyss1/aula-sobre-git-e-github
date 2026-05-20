@@ -1,0 +1,152 @@
+GUIA DE INSTALAÇÃO DO GIT NO WINDOWS
+=====================================
+
+PASSO A PASSO COMPLETO
+======================
+
+1. BAIXAR O INSTALADOR
+   - Acesse o site oficial do Git: https://git-scm.com/
+   - Clique no botão "Download for Windows"
+   - O navegador fará o download automaticamente do instalador (Git-X.XX.X-64-bit.exe)
+
+2. EXECUTAR O INSTALADOR
+   - Localize o arquivo baixado na pasta de Downloads
+   - Clique duas vezes no arquivo para iniciar a instalação
+   - Você verá uma janela de controle de acesso, clique em "Sim" para permitir
+
+3. ACEITAR OS TERMOS DE LICENÇA
+   - Leia (ou ignore) a licença GNU General Public License v2.0
+   - Clique no botão "Next" para prosseguir
+
+4. SELECIONAR O CAMINHO DE INSTALAÇÃO
+   - Escolha onde o Git será instalado (padrão: C:\Program Files\Git)
+   - Recomenda-se deixar o local padrão
+   - Clique em "Next"
+
+5. ESCOLHER COMPONENTES
+   - Deixe as opções padrão selecionadas:
+     ✓ Git Bash Here
+     ✓ Git GUI Here
+     ✓ Git LFS (Large File Support)
+   - Clique em "Next"
+
+6. CRIAR ATALHOS NO MENU INICIAR
+   - Deixe a opção padrão "Git" selecionada
+   - Clique em "Next"
+
+7. SELECIONAR O EDITOR PADRÃO
+   - Escolha um editor de texto de sua preferência:
+     • Vim (padrão)
+     • Nano
+     • Visual Studio Code
+     • Notepad++
+     • Outro de sua escolha
+   - Recomenda-se Visual Studio Code ou Vim
+   - Clique em "Next"
+
+8. AJUSTAR O PATH DO SISTEMA
+   - Selecione: "Git from the command line and also from 3rd-party software"
+   - Esta opção permite usar Git no PowerShell e Command Prompt
+   - Clique em "Next"
+
+9. ESCOLHER A BIBLIOTECA HTTPS
+   - Deixe a opção padrão: "Use the OpenSSL library"
+   - Clique em "Next"
+
+10. CONFIGURAR CONVERSÃO DE FIM DE LINHA
+    - Deixe a opção padrão: "Checkout Windows-style, commit Unix-style CRLF"
+    - Isso garante compatibilidade entre Windows e outros sistemas
+    - Clique em "Next"
+
+11. SELECIONAR O EMULADOR TERMINAL
+    - Escolha "Use Windows' default console window"
+    - Clique em "Next"
+
+12. CONFIGURAR COMPORTAMENTO DE GIT PULL
+    - Deixe a opção padrão: "Default (fast-forward or merge)"
+    - Clique em "Next"
+
+13. CONFIGURAR GERENCIADOR DE CREDENCIAIS
+    - Deixe a opção padrão: "Git Credential Manager"
+    - Clique em "Next"
+
+14. ATIVAR RECURSOS EXPERIMENTAIS (OPCIONAL)
+    - Deixe desmarcadas as opções experimentais
+    - Clique em "Next"
+
+15. CONCLUIR A INSTALAÇÃO
+    - Clique em "Install" para iniciar a cópia dos arquivos
+    - Aguarde a conclusão (pode levar alguns minutos)
+
+16. FINALIZAR
+    - Deixe a opção "Launch Git Bash" marcada se desejar abrir o terminal
+    - Clique em "Finish"
+
+VERIFICAR A INSTALAÇÃO
+======================
+
+Após a instalação, abra o PowerShell ou Command Prompt e execute:
+
+   git --version
+
+Você deverá ver uma resposta similar a:
+   git version 2.45.0
+
+CONFIGURAÇÃO INICIAL
+====================
+
+Configure seu nome e email (obrigatório para usar Git):
+
+   git config --global user.name "Seu Nome"
+   git config --global user.email "seu.email@example.com"
+
+Para verificar se foi configurado corretamente:
+
+   git config --global user.name
+   git config --global user.email
+
+PRIMEIROS COMANDOS
+==================
+
+Após a instalação e configuração, você está pronto para usar Git:
+
+• Clone um repositório:
+  git clone https://github.com/usuario/repositorio.git
+
+• Crie um novo repositório local:
+  git init
+
+• Verifique o status:
+  git status
+
+• Adicione arquivos:
+  git add .
+
+• Faça um commit:
+  git commit -m "Sua mensagem"
+
+• Envie para um servidor remoto:
+  git push
+
+DICAS IMPORTANTES
+=================
+
+✓ Sempre use nomes de usuário e emails válidos
+✓ Guarde bem suas credenciais (usuário e senha/token)
+✓ Para repositórios privados, use SSH ou tokens de acesso pessoal
+✓ Mantenha o Git atualizado regularmente
+✓ Use Git Bash para melhor experiência em Windows
+
+SOLUÇÃO DE PROBLEMAS
+====================
+
+Problema: "Git não é reconhecido como comando interno"
+Solução: Reinicie o Command Prompt ou PowerShell e tente novamente
+
+Problema: Erro de autenticação ao fazer push/pull
+Solução: Verifique suas credenciais e gere um token de acesso pessoal
+
+Problema: Conflito de CRLF/LF
+Solução: Execute: git config --global core.autocrlf true
+
+Pronto! Você agora tem o Git instalado e configurado no Windows!
