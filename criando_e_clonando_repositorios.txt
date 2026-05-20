@@ -1,0 +1,143 @@
+PASSO A PASSO PARA CRIAR E CLONAR REPOSITÓRIOS
+==============================================
+
+PARTE 1: CRIANDO UM NOVO REPOSITÓRIO
+====================================
+
+1. Criar um repositório local do zero:
+   - Crie uma pasta para o projeto:
+     mkdir meu-projeto
+   - Entre na pasta:
+     cd meu-projeto
+   - Inicialize o Git:
+     git init
+   - Uma pasta oculta .git será criada
+
+2. Criar arquivos iniciais:
+   - Crie um arquivo README.md:
+     echo "# Meu Projeto" > README.md
+   - Ou outros arquivos conforme necessário
+
+3. Preparar commits iniciais:
+   - Adicione todos os arquivos:
+     git add .
+   - Crie o primeiro commit:
+     git commit -m "Commit inicial"
+
+4. Conectar a um repositório remoto no GitHub:
+   - Acesse github.com e clique em "New repository"
+   - Preencha o nome do repositório (ex: meu-projeto)
+   - Escolha se será público ou privado
+   - NÃO inicialize com README, .gitignore ou licença
+   - Clique em "Create repository"
+
+5. Associar o repositório remoto:
+   - No seu terminal local, execute:
+     git remote add origin git@github.com:seu-usuario/meu-projeto.git
+   - Se preferir HTTPS:
+     git remote add origin https://github.com/seu-usuario/meu-projeto.git
+
+6. Fazer o primeiro push:
+   - Renomeie a branch padrão (se necessário):
+     git branch -M main
+   - Envie para o GitHub:
+     git push -u origin main
+   - Agora seu repositório está no GitHub!
+
+PARTE 2: CLONANDO UM REPOSITÓRIO EXISTENTE
+==========================================
+
+1. Obter o link do repositório:
+   - Acesse o repositório no GitHub
+   - Clique no botão verde "Code"
+   - Copie a URL (SSH ou HTTPS)
+
+2. Clonar o repositório:
+   - Abra Git Bash ou PowerShell
+   - Navegue até a pasta onde deseja clonar:
+     cd Desktop
+   - Execute o comando clone:
+     git clone https://github.com/usuario/repositorio.git
+   - Ou, se usar SSH:
+     git clone git@github.com:usuario/repositorio.git
+
+3. Aguarde a clonagem:
+   - O Git baixará todos os arquivos e o histórico completo
+   - Uma pasta com o nome do repositório será criada
+
+4. Entre na pasta clonada:
+   - cd repositorio
+
+5. Verifique o status:
+   - git status
+   - Você deve ver: "On branch main / nothing to commit, working tree clean"
+
+PARTE 3: TRABALHANDO COM O REPOSITÓRIO
+======================================
+
+1. Ver o histórico de commits:
+   - git log
+   - git log --oneline (resumido)
+
+2. Ver branches disponíveis:
+   - git branch -a
+   - Para mudar de branch:
+     git checkout nome-da-branch
+
+3. Criar uma nova branch para suas alterações:
+   - git checkout -b feature/minha-feature
+
+4. Ver alterações:
+   - git status
+   - git diff
+
+5. Adicionar e fazer commit:
+   - git add .
+   - git commit -m "Descrição da alteração"
+
+6. Enviar alterações:
+   - git push origin feature/minha-feature
+
+7. Criar um Pull Request no GitHub:
+   - Acesse o repositório no GitHub
+   - Um botão "Compare & pull request" aparecerá
+   - Descreva as alterações e clique em "Create Pull Request"
+
+COMANDOS RÁPIDOS DE REFERÊNCIA
+==============================
+
+# Criar repositório local
+git init
+
+# Clonar um repositório
+git clone <url>
+
+# Ver configurações remotas
+git remote -v
+
+# Adicionar novo remoto
+git remote add origin <url>
+
+# Ver branches
+git branch -a
+
+# Criar nova branch
+git checkout -b nome-branch
+
+# Mudar de branch
+git checkout nome-branch
+
+# Adicionar arquivos
+git add .
+
+# Fazer commit
+git commit -m "mensagem"
+
+# Enviar para remoto
+git push origin nome-branch
+
+# Atualizar repositório local
+git pull origin nome-branch
+
+# Ver histórico
+git log --oneline
